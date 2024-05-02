@@ -19,7 +19,7 @@ export class CarteVisiteComponent {
       lastName: ['', Validators.required],
       entreprise: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      telephone: ['', Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]
+      telephone: ['', Validators.required]
     });
   }
 

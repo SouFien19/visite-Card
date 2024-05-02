@@ -3,7 +3,7 @@ export class CarteVisite {
     prenom!: string;
     entreprise!: string;
     email!: string;
-    telephone!: string;
+    telephone!: number;
 
   }
   
