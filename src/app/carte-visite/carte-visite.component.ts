@@ -16,7 +16,10 @@ export class CarteVisiteComponent {
   constructor(private formBuilder: FormBuilder) {
     this.myForm = this.formBuilder.group({
       firstName: ['', Validators.required],
-      lastName: ['', Validators.required]
+      lastName: ['', Validators.required],
+      entreprise: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      telephone: ['', Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]
     });
   }
 
@@ -24,6 +27,9 @@ export class CarteVisiteComponent {
     if (this.myForm.valid) {
       this.carte.nom = this.myForm.value.firstName;
       this.carte.prenom = this.myForm.value.lastName;
+      this.carte.entreprise = this.myForm.value.entreprise;
+      this.carte.email = this.myForm.value.email;
+      this.carte.telephone = this.myForm.value.telephone;
     }
   }
 }
