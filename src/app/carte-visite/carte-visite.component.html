@@ -1,0 +1,36 @@
+<div class="container mt-5">
+  <h1 class="text-center mb-4">Formulaire de Contact</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header bg-primary text-white">
+          <h2 class="card-title mb-0">Formulaire</h2>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <label for="firstName" class="form-label">Nom:</label>
+              <input type="text" formControlName="firstName" id="firstName" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="lastName" class="form-label">Prénom:</label>
+              <input type="text" formControlName="lastName" id="lastName" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Soumettre</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header bg-success text-white">
+          <h2 class="card-title mb-0">Carte de Visite</h2>
+        </div>
+        <div class="card-body">
+          <p class="card-text"><strong>Nom:</strong> {{ carte.nom }}</p>
+          <p class="card-text"><strong>Prénom:</strong> {{ carte.prenom }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
